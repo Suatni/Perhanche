@@ -7,7 +7,7 @@ namespace NinjaController {
   [RequireComponent(typeof(Rigidbody2D))]
   [RequireComponent(typeof(Collider2D))]
   public class NinjaController : MonoBehaviour {
-
+        public Animator animator;
     private Rigidbody2D RBody { get; set; }
 
     [SerializeField]
