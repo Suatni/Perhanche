@@ -4243,7 +4243,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &1006477427
+--- !u!1001 &1009237687
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -4253,15 +4253,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3070150392310301774, guid: ea1be575a0c3eb8419617f6a5fdd183c, type: 3}
       propertyPath: m_Name
-      value: Guy (1)
+      value: Guy
       objectReference: {fileID: 0}
     - target: {fileID: 4664291957540702898, guid: ea1be575a0c3eb8419617f6a5fdd183c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.36
+      value: -16.990402
       objectReference: {fileID: 0}
     - target: {fileID: 4664291957540702898, guid: ea1be575a0c3eb8419617f6a5fdd183c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.79
+      value: 1.7350386
       objectReference: {fileID: 0}
     - target: {fileID: 4664291957540702898, guid: ea1be575a0c3eb8419617f6a5fdd183c, type: 3}
       propertyPath: m_LocalPosition.z
@@ -38586,4 +38586,4 @@ SceneRoots:
   - {fileID: 1076171000}
   - {fileID: 232150050}
   - {fileID: 359395886}
-  - {fileID: 1006477427}
+  - {fileID: 1009237687}
