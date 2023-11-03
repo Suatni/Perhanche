@@ -30,6 +30,25 @@ public class CharacterController2D : MonoBehaviour
 	public BoolEvent OnCrouchEvent;
 	private bool m_wasCrouching = false;
 
+    private SoundManagerScript soundManager; // Reference to the SoundManagerScript
+
+    private void Start()
+    {
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
+		// Assuming you have a GameObject named "SoundManager" with the SoundManagerScript attached.
+	}
+
+	private void Update()
+	{
+		// Check for game events like jumping and running
+		if (Input.GetKeyDown(KeyCode.Space))
+		{
+			soundManager.PlayJumpNoise(); // Play jump sound
+		}
+
+    }
+
+
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -92,7 +111,8 @@ public class CharacterController2D : MonoBehaviour
 				// Disable one of the colliders when crouching
 				if (m_CrouchDisableCollider != null)
 					m_CrouchDisableCollider.enabled = false;
-			} else
+			}
+			else
 			{
 				// Enable the collider when not crouching
 				if (m_CrouchDisableCollider != null)
@@ -110,21 +130,30 @@ public class CharacterController2D : MonoBehaviour
 			// And then smoothing it out and applying it to the character
 			m_Rigidbody2D.velocity = Vector3.SmoothDamp(m_Rigidbody2D.velocity, targetVelocity, ref m_Velocity, m_MovementSmoothing);
 
+
 			// If the input is moving the player right and the player is facing left...
 			if (move > 0 && !m_FacingRight)
 			{
 				// ... flip the player.
 				Flip();
+				soundManager.PlayRunNoise();
 			}
 			// Otherwise if the input is moving the player left and the player is facing right...
 			else if (move < 0 && m_FacingRight)
 			{
 				// ... flip the player.
 				Flip();
+				soundManager.PlayRunNoise();
 			}
-		}
-		// If the player should jump...
-		if (m_Grounded && jump)
+
+            if (!m_Grounded)
+            {
+                soundManager.StopRunNoise();
+            }
+
+        }
+        // If the player should jump...
+        if (m_Grounded && jump)
 		{
 			// Add a vertical force to the player.
 			m_Grounded = false;

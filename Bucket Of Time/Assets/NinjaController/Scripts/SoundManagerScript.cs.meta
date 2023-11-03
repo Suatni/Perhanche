@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: ca95062597cf2fd4ba1757deb901f2cf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - deathNoiseSound: {fileID: 8300000, guid: b8c7cc90e5fece04c9537ce992c6e963, type: 3}
+  - dinoNoiseSound: {fileID: 8300000, guid: a75fe998a32839345aed39fc2fe9b5a1, type: 3}
+  - hitNoiseSound: {fileID: 8300000, guid: 447325a385d168944b797cbbd367be3a, type: 3}
+  - jumpNoiseSound: {fileID: 8300000, guid: ea5b7cf18421c464c9b4b8b9413e96d9, type: 3}
+  - runNoiseSound: {fileID: 8300000, guid: 54d25f32e609a124ca6a20fc24553c15, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
